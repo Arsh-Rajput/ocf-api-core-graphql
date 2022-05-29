@@ -35,6 +35,11 @@ public class GraphQlApiException extends RuntimeException implements GraphQLErro
 	}
 
 	
+	@Override
+	public String toString() {
+		return "GraphQlApiException [extension=" + extension + "]";
+	}
+
 	public Map<String, Object> getExtensions() {
 		return this.extension;
 	}

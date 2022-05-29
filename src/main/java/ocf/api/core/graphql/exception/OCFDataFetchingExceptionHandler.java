@@ -1,4 +1,4 @@
-package ocf.api.core.graphql.models.exception;
+package ocf.api.core.graphql.exception;
 
 import com.netflix.graphql.dgs.DgsComponent;
 import com.netflix.graphql.dgs.exceptions.DefaultDataFetcherExceptionHandler;
