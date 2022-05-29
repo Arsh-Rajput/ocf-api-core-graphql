@@ -34,6 +34,7 @@ public class GraphQlApiException extends RuntimeException implements GraphQLErro
 		};
 	}
 
+	
 	public Map<String, Object> getExtensions() {
 		return this.extension;
 	}

@@ -16,10 +16,10 @@ public class OCFDataFetchingExceptionHandler implements DataFetcherExceptionHand
 	public DataFetcherExceptionHandlerResult onException(DataFetcherExceptionHandlerParameters handlerParameters) {
 		// TODO Auto-generated method stub
 		DefaultDataFetcherExceptionHandler defaultDataFetcherExceptionHandler = new DefaultDataFetcherExceptionHandler();
-		if (handlerParameters.getException().getCause() instanceof GraphQlApiException
-				|| handlerParameters.getException().getCause() instanceof GraphQlValidationException) {
+		if (handlerParameters.getException() instanceof GraphQlApiException
+				|| handlerParameters.getException() instanceof GraphQlValidationException) {
 			return DataFetcherExceptionHandlerResult.newResult()
-					.error((GraphQLError) handlerParameters.getException().getCause()).build();
+					.error((GraphQLError) handlerParameters.getException()).build();
 		} else {
 			return defaultDataFetcherExceptionHandler.onException(handlerParameters);
 		}
